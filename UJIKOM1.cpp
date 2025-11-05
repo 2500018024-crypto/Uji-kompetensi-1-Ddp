@@ -1,35 +1,28 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main() {
     long long totalDetik;
     
-    cout << "===============================" << endl;
-    cout << "    KONVERSI DETIK -> WAKTU   " << endl;
-    cout << "===============================" << endl;
-    
-    cout << "Masukkan jumlah detik (>1): ";
+    cout << "Masukkan bilangan >1 (satuan detik)" << endl;
+    cout << " >> ";
     cin >> totalDetik;
     
+    // Validasi input
     if (totalDetik <= 1) {
-        cout << "Error: Input harus > 1" << endl;
+        cout << "Error: Masukkan bilangan lebih besar dari 1!" << endl;
         return 1;
     }
     
+    // Konversi detik,jam,menit
     long long jam = totalDetik / 3600;
     long long sisaDetik = totalDetik % 3600;
     long long menit = sisaDetik / 60;
     long long detik = sisaDetik % 60;
     
-    cout << "-------------------------------" << endl;
-    cout << "HASIL KONVERSI:" << endl;
-    cout << "-------------------------------" << endl;
-    cout << totalDetik << " detik = " 
-         << jam << " jam, " 
-         << menit << " menit, " 
-         << detik << " detik" << endl;
-    cout << "===============================" << endl;
+    // Output hasil
+    cout << "Hasil Konversi:" << endl;
+    cout << totalDetik << " detik = " << jam << " Jam, " << menit << " Menit, " << detik << " Detik." << endl;
     
     return 0;
 }
