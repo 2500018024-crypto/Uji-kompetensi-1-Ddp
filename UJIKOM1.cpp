@@ -4,6 +4,7 @@ using namespace std;
 int main() {
     long long totalDetik;
     
+    cout << "=== KONVERSI WAKTU ===" << endl;
     cout << "Masukkan bilangan >1 (satuan detik)" << endl;
     cout << " >> ";
     cin >> totalDetik;
@@ -14,7 +15,7 @@ int main() {
         return 1;
     }
     
-    // Konversi detik,jam,menit
+    // Konversi jam,menit,detik
     long long jam = totalDetik / 3600;
     long long sisaDetik = totalDetik % 3600;
     long long menit = sisaDetik / 60;
